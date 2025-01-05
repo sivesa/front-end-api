@@ -18,7 +18,7 @@ This API provides front-end functionality for user authentication and registrati
 
 **Workflow:**
 1. Retrieves the identifier and password from input fields.
-2. Sends a `POST` request to the `/api/api/login` endpoint with form-encoded data.
+2. Sends a `POST` request to the `/api/login` endpoint with form-encoded data.
 3. Redirects users to the landing page on successful authentication or displays an error message on failure.
 
 ### Social Login
