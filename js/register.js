@@ -8,11 +8,15 @@ async function registerUser() {
         alert('Passwords do not match. Please try again.');
         return;
     }
+
+    const hashedPassword = await bcrypt.hash(password, 10); // Hash the password with a salt round of 10
+    
+    
     const data = new URLSearchParams();
     data.append('firstName', firstName);
     data.append('lastName', lastName);
     data.append('identifier', email);
-    data.append('password', password);
+    data.append('password', hashedPassword);
     try {
         const response = await fetch('/api/register', {
             method: 'POST',

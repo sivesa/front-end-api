@@ -11,7 +11,7 @@ This API provides front-end functionality for user authentication and registrati
 
 ## Login Implementation
 
-### Login with Membership Number
+### Login with identifier
 **Function:** `loginUser()`
 
 **Description:** Authenticates users based on their identifier and password.
