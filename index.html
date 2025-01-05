@@ -70,20 +70,17 @@
         async function loginUser() {
             const membershipNumber = document.getElementById('identifier').value;
             const password = document.getElementById('password').value;
-
             const data = new URLSearchParams();
             data.append('identifier', membershipNumber);
             data.append('password', password);
-
             try {
                 const response = await fetch('/library/login', {
                     method: 'POST',
                     headers: {
-                        'Content-Type': 'application/x-www-form-urlencoded'
+                        'Content-Type': 'application/x-www-form-urlencoded' 
                     },
                     body: data
                 });
-
                 if (response.ok) {
                     window.location.href = '/landing.html'; // Redirect to landing page
                 } else {
@@ -94,12 +91,10 @@
                 alert('An error occurred. Please try again later.');
             }
         }
-
         function loginWithGoogle() {
             // API call for Google login
             window.location.href = '/api/auth/google'; // Replace with actual Google login API
         }
-
         function loginWithFacebook() {
             // API call for Facebook login
             window.location.href = '/api/auth/facebook'; // Replace with actual Facebook login API
